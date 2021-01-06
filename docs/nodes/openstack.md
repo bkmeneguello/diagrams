@@ -8,6 +8,14 @@ Node classes list of openstack provider.
 ## openstack.adjacentenablers
 
 
+## openstack.adjacentenablers/containerservices
+
+- **diagrams.openstack.adjacentenablers/containerservices.Kuryr**
+
+## openstack.adjacentenablers/nfv
+
+- **diagrams.openstack.adjacentenablers/nfv.Tacker**
+
 ## openstack.apiproxies
 
 - **diagrams.openstack.apiproxies.EC2API**
@@ -24,28 +32,11 @@ Node classes list of openstack provider.
 - **diagrams.openstack.baremetal.Cyborg**
 - **diagrams.openstack.baremetal.Ironic**
 
-## openstack.billing
-
-- **diagrams.openstack.billing.Cloudkitty**, **CloudKitty** (alias)
-
 ## openstack.compute
 
 - **diagrams.openstack.compute.Nova**
 - **diagrams.openstack.compute.Qinling**
 - **diagrams.openstack.compute.Zun**
-
-## openstack.containerservices
-
-- **diagrams.openstack.containerservices.Kuryr**
-
-## openstack.deployment
-
-- **diagrams.openstack.deployment.Ansible**
-- **diagrams.openstack.deployment.Charms**
-- **diagrams.openstack.deployment.Chef**
-- **diagrams.openstack.deployment.Helm**
-- **diagrams.openstack.deployment.Kolla**, **KollaAnsible** (alias)
-- **diagrams.openstack.deployment.Tripleo**, **TripleO** (alias)
 
 ## openstack.frontend
 
@@ -54,14 +45,20 @@ Node classes list of openstack provider.
 ## openstack.lifecyclemanagement
 
 
-## openstack.monitoring
+## openstack.lifecyclemanagement/deployment
 
-- **diagrams.openstack.monitoring.Monasca**
-- **diagrams.openstack.monitoring.Telemetry**
+- **diagrams.openstack.lifecyclemanagement/deployment.Ansible**
+- **diagrams.openstack.lifecyclemanagement/deployment.Charms**
+- **diagrams.openstack.lifecyclemanagement/deployment.Chef**
+- **diagrams.openstack.lifecyclemanagement/deployment.Helm**
+- **diagrams.openstack.lifecyclemanagement/deployment.Kolla**
+- **diagrams.openstack.lifecyclemanagement/deployment.Tripleo**
 
-## openstack.multiregion
+## openstack.lifecyclemanagement/packaging
 
-- **diagrams.openstack.multiregion.Tricircle**
+- **diagrams.openstack.lifecyclemanagement/packaging.LOCI**
+- **diagrams.openstack.lifecyclemanagement/packaging.Puppet**
+- **diagrams.openstack.lifecyclemanagement/packaging.RPM**
 
 ## openstack.networking
 
@@ -69,19 +66,28 @@ Node classes list of openstack provider.
 - **diagrams.openstack.networking.Neutron**
 - **diagrams.openstack.networking.Octavia**
 
-## openstack.nfv
-
-- **diagrams.openstack.nfv.Tacker**
-
 ## openstack.operations
 
 
-## openstack.optimization
+## openstack.operations/billing
 
-- **diagrams.openstack.optimization.Congress**
-- **diagrams.openstack.optimization.Rally**
-- **diagrams.openstack.optimization.Vitrage**
-- **diagrams.openstack.optimization.Watcher**
+- **diagrams.openstack.operations/billing.Cloudkitty**
+
+## openstack.operations/monitoring
+
+- **diagrams.openstack.operations/monitoring.Monasca**
+- **diagrams.openstack.operations/monitoring.Telemetry**
+
+## openstack.operations/multiregion
+
+- **diagrams.openstack.operations/multiregion.Tricircle**
+
+## openstack.operations/optimization
+
+- **diagrams.openstack.operations/optimization.Congress**
+- **diagrams.openstack.operations/optimization.Rally**
+- **diagrams.openstack.operations/optimization.Vitrage**
+- **diagrams.openstack.operations/optimization.Watcher**
 
 ## openstack.orchestration
 
@@ -90,12 +96,6 @@ Node classes list of openstack provider.
 - **diagrams.openstack.orchestration.Mistral**
 - **diagrams.openstack.orchestration.Senlin**
 - **diagrams.openstack.orchestration.Zaqar**
-
-## openstack.packaging
-
-- **diagrams.openstack.packaging.LOCI**
-- **diagrams.openstack.packaging.Puppet**
-- **diagrams.openstack.packaging.RPM**
 
 ## openstack.sharedservices
 

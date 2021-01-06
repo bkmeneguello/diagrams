@@ -80,7 +80,11 @@ TITLE_WORDS = {
         "alibabacloud": "AlibabaCloud"
     },
     "aws": {
-        "cloudfront": "CloudFront"
+        "cloudfront": "CloudFront",
+        "documentdb": "DocumentDB",
+        "dynamodb": "DynamoDB",
+        "dynamodbaccelerator": "DynamoDBAccelerator",
+        "Fsx": "FSx",
     },
     "openstack": {
         "openstack": "OpenStack"
@@ -156,39 +160,37 @@ ALIASES = {
             "AlexaForBusiness": "A4B"
         },
         "blockchain": {
-            "QuantumLedgerDatabaseQldb": "QLDB"
+            "QuantumLedgerDatabase": "QLDB"
         },
         "compute": {
             "ApplicationAutoScaling": "AutoScaling",
-            "EC2ContainerRegistry": "ECR",
+            "ElasticContainerRegistry": "ECR",
             "ElasticBeanstalk": "EB",
             "ElasticContainerService": "ECS",
-            "ElasticKubernetesService": "EKS",
+            "ElasticContainerKubernetes": "EKS",
             "ServerlessApplicationRepository": "SAR",
         },
         "database": {
-            "DatabaseMigrationService": "DMS",
-            "DocumentdbMongodbCompatibility": "DocumentDB",
-            "DynamodbDax": "DAX",
-            "DynamodbGlobalSecondaryIndex": "DynamodbGSI",
-            "Database": "DB",
-            "Dynamodb": "DDB",
+            "DatabaseMigration": "DMS",
+            "DynamoDB": "DDB",
             "Elasticache": "ElastiCache",
-            "QuantumLedgerDatabaseQldb": "QLDB",
+            "QuantumLedgerDatabase": "QLDB",
+        },
+        "dynamodb": {
+            "DynamoDBAccelerator": "DAX",
         },
         "devtools": {
             "CommandLineInterface": "CLI",
-            "DeveloperTools": "DevTools",
         },
         "engagement": {
-            "SimpleEmailServiceSes": "SES",
+            "SimpleEmailService": "SES",
         },
         "general": {
-            "GenericOfficeBuilding": "OfficeBuilding",
+            "GenericDatabase": "DB",
         },
         "integration": {
-            "SimpleNotificationServiceSns": "SNS",
-            "SimpleQueueServiceSqs": "SQS",
+            "SimpleNotificationService": "SNS",
+            "SimpleQueueService": "SQS",
             "StepFunctions": "SF",
         },
         "iot": {
@@ -197,13 +199,11 @@ ALIASES = {
         },
         "management": {
             "SystemsManager": "SSM",
-            "SystemsManagerParameterStore": "ParameterStore",
         },
         "migration": {
             "ApplicationDiscoveryService": "ADS",
             "CloudendureMigration": "CEM",
-            "DatabaseMigrationService": "DMS",
-            "MigrationAndTransfer": "MAT",
+            "DatabaseMigration": "DMS",
             "ServerMigrationService": "SMS",
         },
         "ml": {
@@ -213,26 +213,22 @@ ALIASES = {
             "CloudFront": "CF",
             "ElasticLoadBalancing": "ELB",
             "GlobalAccelerator": "GAX",
+            "VirtualPrivateCloud": "VPC",
         },
         "security": {
             "CertificateManager": "ACM",
             "Cloudhsm": "CloudHSM",
             "DirectoryService": "DS",
             "FirewallManager": "FMS",
-            "IdentityAndAccessManagementIamAccessAnalyzer": "IAMAccessAnalyzer",
-            "IdentityAndAccessManagementIamAWSSts": "IAMAWSSts",
-            "IdentityAndAccessManagementIamPermissions": "IAMPermissions",
-            "IdentityAndAccessManagementIamRole": "IAMRole",
-            "IdentityAndAccessManagementIam": "IAM",
-            "KeyManagementService": "KMS",
-            "ResourceAccessManager": "RAM",
+            "IdentityAndAccessManagement": "IAM",
+            "KeyManagementServices": "KMS",
+            "ResourcesAccessManager": "RAM",
         },
         "storage": {
             "CloudendureDisasterRecovery": "CDR",
-            "ElasticBlockStoreEBS": "EBS",
-            "ElasticFileSystemEFS": "EFS",
-            "Fsx": "FSx",
-            "SimpleStorageServiceS3": "S3",
+            "ElasticBlockStore": "EBS",
+            "ElasticFileSystem": "EFS",
+            "S3Standard": "S3",
         },
     },
     "azure": {

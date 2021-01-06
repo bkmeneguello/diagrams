@@ -1,5 +1,6 @@
 import os
 import sys
+import re
 from typing import Iterable
 
 from jinja2 import Environment, FileSystemLoader, Template
@@ -17,11 +18,12 @@ def load_tmpl(tmpl: str) -> Template:
 
 
 def up_or_title(pvd: str, s: str) -> str:
+    s = os.path.basename(s)
     if s in cfg.UPPER_WORDS.get(pvd, ()):
         return s.upper()
     if s in cfg.TITLE_WORDS.get(pvd, {}):
         return cfg.TITLE_WORDS[pvd][s]
-    return s.title()
+    return re.sub(r'-([a-z0-9])', lambda m: m.group(1).upper(), s).title()
 
 
 def gen_classes(pvd: str, typ: str, paths: Iterable[str]) -> str:
@@ -60,7 +62,8 @@ def gen_apidoc(pvd: str, typ_paths: dict) -> str:
 
 def make_module(pvd: str, typ: str, classes: str) -> None:
     """Create a module file"""
-    mod_path = os.path.join(app_root_dir(pvd), f"{typ}.py")
+    mod_path = os.path.join(app_root_dir(pvd), typ, "__init__.py")
+    os.makedirs(os.path.dirname(mod_path), exist_ok=True)
     with open(mod_path, "w+") as f:
         f.write(classes)
 
@@ -75,15 +78,16 @@ def make_apidoc(pvd: str, content: str) -> None:
 def generate(pvd: str) -> None:
     """Generates a service node classes."""
     typ_paths = {}
-    for root, _, files in os.walk(resource_dir(pvd)):
+    base = resource_dir(pvd)
+    for root, _, files in os.walk(base):
         # Extract the names and paths from resources.
         files.sort()
         pngs = list(filter(lambda f: f.endswith(".png"), files))
         paths = list(filter(lambda f: "rounded" not in f, pngs))
 
         # Skip the top-root directory.
-        typ = os.path.basename(root)
-        if typ == pvd:
+        typ = os.path.relpath(root, base)
+        if typ == ".":
             continue
 
         classes = gen_classes(pvd, typ, paths)
